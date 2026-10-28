@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="GTU Topper OS - all-subject study planner and progress tracker">
+  <title>GTU Topper OS</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">GT</div><div><strong>GTU TOPPER OS</strong><small>STUDY COMMAND CENTER</small></div></div>
+      <nav id="sideNav">
+        <button class="nav-item active" data-view="overview"><span>◈</span> Overview</button>
+        <button class="nav-item" data-view="syllabus"><span>▤</span> Syllabus tracker</button>
+        <button class="nav-item" data-view="planner"><span>▦</span> Daily planner</button>
+        <button class="nav-item" data-view="focus"><span>◷</span> Focus timer</button>
+        <button class="nav-item" data-view="revision"><span>↻</span> Revision queue</button>
+        <button class="nav-item" data-view="tests"><span>✎</span> Tests & mistakes</button>
+        <button class="nav-item" data-view="analytics"><span>▥</span> Analytics</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span> Settings & backup</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="offline-pill"><i></i><span id="connectionText">Ready to study offline</span></div><small>YOUR DATA STAYS ON THIS DEVICE</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+        <div><p class="eyebrow" id="todayLabel">YOUR STUDY SPACE</p><h1 id="pageTitle">Overview</h1></div>
+        <div class="top-actions"><span class="date-chip" id="dateChip"></span><button class="icon-btn" id="installBtn" hidden>＋ Install app</button></div>
+      </header>
+      <div id="appContent" class="content"></div>
+      <footer>GTU TOPPER OS <span>•</span> Build habits. Track progress. Keep improving.</footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="modal"><div id="modalContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
